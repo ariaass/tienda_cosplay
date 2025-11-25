@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Tienda Cosplay - Admin precios</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  
+  <link rel="stylesheet" href="../Assets/css/style.css">
+</head>
+
+<body>
+
+  <!-- Navbar principal -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-navbar shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="../index.html">Tienda Cosplay</a>
+
+      <!-- Botón responsive / pantallas pequeñas -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+
+          <!-- Zona Cliente -->
+          <li class="nav-item"><a class="nav-link" href="/index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="/productos.html">Productos</a></li>
+          <li class="nav-item"><a class="nav-link" href="/testimonios.html">Testimonios</a></li>
+
+          <!-- texto separador -->
+          <li class="nav-item">
+            <span class="nav-link disabled separador-admin">Admin</span>
+          </li>
+
+          <!-- Zona Admin -->
+          <li class="nav-item"><a class="nav-link nav-admin" href="/admin/clientes.html">Clientes</a></li>
+          <li class="nav-item"><a class="nav-link nav-admin" href="/admin/admin.html">Admin precios</a></li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <main class="py-5">
+    <div class="container page-container">
+
+      <!-- Título y explicación -->
+      <section class="mb-4">
+        <h1 class="h2">Administración de precios (Procedimiento)</h1>
+        <p class="text-muted">
+          Aquí se usa el procedimiento <code>ActualizarPrecioProductos(porcentaje)</code>.
+        </p>
+      </section>
+
+      <!-- Formulario simple para enviar el porcentaje al backend -->
+      <section>
+        <div class="input-group mb-3">
+          <span class="input-group-text">%</span>
+          <input type="number" id="input-porcentaje" class="form-control" placeholder="10">
+
+          <!-- Botón que activa el procedimiento -->
+          <button id="btn-actualizar-precios" class="btn btn-danger">
+            Aplicar reajuste
+          </button>
+        </div>
+
+        <!-- resultado -->
+        <div id="resultado-procedimiento" class="alert d-none" role="alert"></div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-navbar text-white text-center py-3 mt-auto">
+    <small>© 2025 Tienda Cosplay - Proyecto de Javiera Carmona</small>
+  </footer>
+
+  <!-- bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+  <script src="../Assets/script/main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,228 @@
+/* ========= PALETA DE COLORES ========= */
+:root {
+  --pink-main: #ff4f8b;
+  --pink-main-dark: #e23d77;
+  --pink-soft: #ffe0f0;
+  --pink-bg: #ffe8f5;
+  --gray-dark: #111827;
+  --gray-text: #555555;
+}
+
+/* Fondo general de la página */
+body {
+  min-height: 100vh;
+  background-color: var(--pink-bg);
+  background-image: radial-gradient(circle at top, var(--pink-soft) 0, #ffffff 60%);
+  color: var(--gray-text);
+}
+
+/* Contenedor principal */
+.page-container {
+  max-width: 1100px;
+}
+
+/* ========= PORTADA ========= */
+.hero-box {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(6px);
+  /* efecto glass */
+}
+
+.hero-img {
+  max-width: 1000px;
+  margin-top: 10px;
+  border-radius: 16px;
+}
+
+/* Texto rosado reutilizable */
+.text-pink {
+  color: #d63384;
+}
+
+/* Botón rosado personalizado */
+.btn-pink {
+  background-color: var(--pink-main);
+  border: none;
+  color: white;
+  transition: 0.2s;
+}
+
+.btn-pink:hover {
+  background-color: #e63b75;
+  color: white;
+}
+
+/* ========= NAVBAR Y FOOTER ========= */
+/* Degradado rosado */
+.bg-navbar {
+  background: linear-gradient(90deg, #740d3d, #ff5fa3);
+}
+
+footer.bg-navbar {
+  background: linear-gradient(90deg, #6e153f, #ff5fa3);
+}
+
+/* Textos blancos en navbar */
+.navbar-dark .navbar-brand,
+.navbar-dark .nav-link {
+  color: #fff5fb;
+}
+
+.navbar-brand {
+  letter-spacing: 0.06em;
+}
+
+.nav-link {
+  position: relative;
+  font-weight: 500;
+}
+
+/* Hover rosado con línea */
+.nav-link.active,
+.nav-link:hover {
+  color: var(--pink-soft) !important;
+}
+
+.nav-link.active::after,
+.nav-link:hover::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--pink-main);
+  border-radius: 999px;
+}
+
+/* ========= PORTADA ========= */
+.hero {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+.hero h1 {
+  letter-spacing: 0.04em;
+  color: var(--gray-dark);
+}
+
+.hero p {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* ========= BOTONES ========= */
+.btn-primary,
+.btn-pink {
+  background-color: var(--pink-main);
+  border-color: var(--pink-main);
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-pink:hover {
+  background-color: var(--pink-main-dark);
+  border-color: var(--pink-main-dark);
+}
+
+.btn-pink {
+  color: #ffffff;
+}
+
+/* ========= TARJETAS DE PRODUCTO ========= */
+.card-producto {
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  background-color: #ffffff;
+  border: 1px solid rgba(255, 79, 139, 0.15);
+}
+
+.card-producto:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Imagen del producto */
+.card-producto img {
+  width: 100%;
+  height: 240px;
+  object-fit: contain;
+  border-radius: 12px;
+  background-color: white;
+  border: 2px solid rgba(255, 79, 139, 0.25);
+}
+
+.card-producto .card-body {
+  padding: 0.9rem 1rem 1rem;
+}
+
+/* Etiqueta de tipo de producto */
+.badge-tipo,
+.badge.badge-tipo {
+  font-size: 0.75rem;
+  background-color: rgba(255, 79, 139, 0.12);
+  color: var(--pink-main-dark);
+}
+
+/* ========= TABLAS ========= */
+table.table {
+  background-color: #ffffff;
+  border-radius: 0.75rem;
+  overflow: hidden;
+}
+
+.table thead {
+  background-color: #ffe5f2;
+}
+
+/* ========= TITULOS ========= */
+h1,
+h2,
+h3,
+h4 {
+  color: var(--gray-dark);
+}
+
+/* Footer pegado abajo */
+footer {
+  margin-top: auto;
+}
+
+/* ========= MODAL PRODUCTO ========= */
+#modalProducto .modal-header {
+  background-color: var(--pink-soft);
+}
+
+#modalProducto .modal-title {
+  color: var(--gray-dark);
+}
+
+/* Sección admin en navbar */
+.nav-admin {
+  color: #cccccc !important;
+  font-weight: 500;
+}
+
+.nav-admin:hover {
+  color: #ffffff !important;
+}
+
+.separador-admin {
+  color: #999999 !important;
+  cursor: default;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 0.85rem;
+}
+
+/* Caja destacada para la sección del trigger */
+.admin-title {
+  background: #f0d9ec;
+  padding: 10px 15px;
+  border-left: 4px solid #d03f88;
+  color: #444;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}

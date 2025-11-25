@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Tienda Cosplay - Clientes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="../Assets/css/style.css">
+</head>
+
+<body>
+
+  <!-- Navbar principal -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-navbar shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">Tienda Cosplay</a>
+
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+   
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+
+          <!-- Zona Cliente -->
+          <li class="nav-item"><a class="nav-link" href="/index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="/productos.html">Productos</a></li>
+          <li class="nav-item"><a class="nav-link" href="/testimonios.html">Testimonios</a></li>
+
+          <!-- Texto separador -->
+          <li class="nav-item">
+            <span class="nav-link disabled separador-admin">Admin</span>
+          </li>
+
+          <!-- Zona Admin -->
+          <li class="nav-item"><a class="nav-link nav-admin" href="/admin/clientes.html">Clientes</a></li>
+          <li class="nav-item"><a class="nav-link nav-admin" href="/admin/admin.html">Admin precios</a></li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+
+  <main class="py-5">
+    <div class="container page-container">
+
+      <!-- Vista: ventas por cliente -->
+      <section class="mb-5">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <h1 class="h2 mb-0">Ventas por cliente (Vista)</h1>
+
+          <!-- Botón para cargar datos de la vista -->
+          <button id="btn-ver-ventas" class="btn btn-outline-secondary">
+            Ver ranking de clientes
+          </button>
+        </div>
+
+        <p class="text-muted">
+          Muestra la vista <code>Vista_VentasPorCliente</code>.
+        </p>
+
+        <!-- Tabla donde se muestran los resultados -->
+        <div class="table-responsive">
+          <table class="table table-hover align-middle" id="tabla-ventas">
+            <thead class="table-light">
+              <tr>
+                <th>RUT</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Total en pesos</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Función: total gastado -->
+      <section>
+        <h2 class="h4">Total gastado por cliente (Función)</h2>
+        <p class="text-muted">
+          Usa la función <code>TotalGastadoCliente(rut)</code>.
+        </p>
+
+        <!-- Input + botón para consultar la función -->
+        <div class="input-group mb-3">
+          <input type="text" id="input-rut" class="form-control" placeholder="12.345.678-9">
+          <button id="btn-total-gastado" class="btn btn-success">Calcular</button>
+        </div>
+
+        <!-- Resultado -->
+        <div id="resultado-funcion" class="alert d-none" role="alert"></div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-navbar text-white text-center py-3 mt-auto">
+    <small>© 2025 Tienda Cosplay - Proyecto de Javiera Carmona</small>
+  </footer>
+
+  <!--  Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+ 
+  <script src="../Assets/script/main.js"></script>
+</body>
+
+</html>
